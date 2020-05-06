@@ -535,7 +535,7 @@ kbd {
   font-size: 87.5%;
   color: #fff;
   background-color: #212529;
-  border-radius: 4;
+  border-radius: 0.2rem;
 }
 kbd kbd {
   padding: 0;
@@ -2016,8 +2016,8 @@ pre code {
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border: 2px solid #3d3e47;
+  border-radius: 4;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2061,23 +2061,23 @@ select.form-control:focus::-ms-value {
 }
 
 .col-form-label {
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.5;
 }
 
 .col-form-label-lg {
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 1.25rem;
   line-height: 1.5;
 }
 
 .col-form-label-sm {
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   font-size: 0.875rem;
   line-height: 1.5;
 }
@@ -2092,7 +2092,7 @@ select.form-control:focus::-ms-value {
   color: #212529;
   background-color: transparent;
   border: solid transparent;
-  border-width: 1px 0;
+  border-width: 2px 0;
 }
 .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
   padding-right: 0;
@@ -3333,7 +3333,7 @@ input[type=button].btn-block {
 .input-group > .custom-file + .form-control,
 .input-group > .custom-file + .custom-select,
 .input-group > .custom-file + .custom-file {
-  margin-left: -1px;
+  margin-left: -2px;
 }
 .input-group > .form-control:focus,
 .input-group > .custom-select:focus,
@@ -3387,15 +3387,15 @@ input[type=button].btn-block {
 .input-group-append .btn + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
 .input-group-append .input-group-text + .btn {
-  margin-left: -1px;
+  margin-left: -2px;
 }
 
 .input-group-prepend {
-  margin-right: -1px;
+  margin-right: -2px;
 }
 
 .input-group-append {
-  margin-left: -1px;
+  margin-left: -2px;
 }
 
 .input-group-text {
@@ -3410,8 +3410,8 @@ input[type=button].btn-block {
   text-align: center;
   white-space: nowrap;
   background-color: #e9ecef;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  border: 2px solid #ced4da;
+  border-radius: 4;
 }
 .input-group-text input[type=radio],
 .input-group-text input[type=checkbox] {
@@ -4552,7 +4552,7 @@ input[type=button].btn-block {
   display: flex;
   padding-left: 0;
   list-style: none;
-  border-radius: 4;
+  border-radius: 5rem;
 }
 
 .page-link {
@@ -4580,12 +4580,12 @@ input[type=button].btn-block {
 
 .page-item:first-child .page-link {
   margin-left: 0;
-  border-top-left-radius: 4;
-  border-bottom-left-radius: 4;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
 }
 .page-item:last-child .page-link {
-  border-top-right-radius: 4;
-  border-bottom-right-radius: 4;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
 }
 .page-item.active .page-link {
   z-index: 3;
@@ -4607,12 +4607,12 @@ input[type=button].btn-block {
   line-height: 1.5;
 }
 .pagination-lg .page-item:first-child .page-link {
-  border-top-left-radius: 4;
-  border-bottom-left-radius: 4;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
 }
 .pagination-lg .page-item:last-child .page-link {
-  border-top-right-radius: 4;
-  border-bottom-right-radius: 4;
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
 }
 
 .pagination-sm .page-link {
@@ -4621,12 +4621,12 @@ input[type=button].btn-block {
   line-height: 1.5;
 }
 .pagination-sm .page-item:first-child .page-link {
-  border-top-left-radius: 4;
-  border-bottom-left-radius: 4;
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
 }
 .pagination-sm .page-item:last-child .page-link {
-  border-top-right-radius: 4;
-  border-bottom-right-radius: 4;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
 }
 
 .badge {
@@ -4773,7 +4773,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   background-color: #e9ecef;
-  border-radius: 4;
+  border-radius: 0.3rem;
 }
 @media (min-width: 576px) {
   .jumbotron {
@@ -6184,35 +6184,35 @@ button.bg-dark:focus {
 }
 
 .rounded-sm {
-  border-radius: 4 !important;
+  border-radius: 0.2rem !important;
 }
 
 .rounded {
-  border-radius: 4 !important;
+  border-radius: 5rem !important;
 }
 
 .rounded-top {
-  border-top-left-radius: 4 !important;
-  border-top-right-radius: 4 !important;
+  border-top-left-radius: 5rem !important;
+  border-top-right-radius: 5rem !important;
 }
 
 .rounded-right {
-  border-top-right-radius: 4 !important;
-  border-bottom-right-radius: 4 !important;
+  border-top-right-radius: 5rem !important;
+  border-bottom-right-radius: 5rem !important;
 }
 
 .rounded-bottom {
-  border-bottom-right-radius: 4 !important;
-  border-bottom-left-radius: 4 !important;
+  border-bottom-right-radius: 5rem !important;
+  border-bottom-left-radius: 5rem !important;
 }
 
 .rounded-left {
-  border-top-left-radius: 4 !important;
-  border-bottom-left-radius: 4 !important;
+  border-top-left-radius: 5rem !important;
+  border-bottom-left-radius: 5rem !important;
 }
 
 .rounded-lg {
-  border-radius: 4 !important;
+  border-radius: 0.3rem !important;
 }
 
 .rounded-circle {

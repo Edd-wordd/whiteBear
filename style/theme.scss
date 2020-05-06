@@ -221,3 +221,17 @@ $input-padding-x-sm: $input-btn-padding-x-sm;
 
 $input-padding-y-lg: $input-btn-padding-y-lg;
 $input-padding-x-lg: $input-btn-padding-x-lg;
+
+// Input border-radius
+$input-border-radius: $border-radius;
+
+$border-radius: 5rem;
+$border-radius-lg: 0.3rem;
+$border-radius-sm: 0.2rem;
+
+$border-width: 2px;
+$border-color: $gray-600;
+$input-btn-border-width: $border-width;
+// changes the border color
+$input-border-color: $secondary;
+$input-border-width: $input-btn-border-width;

@@ -11411,6 +11411,11 @@ h3 {
 .topName {
   position: absolute;
   z-index: 10;
+  margin-left: 128;
+}
+
+.bearStar {
+  margin-right: 32;
 }
 
 #brandHeader {

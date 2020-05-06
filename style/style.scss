@@ -55,14 +55,9 @@
 .topName {
    position: absolute;
    z-index: 10;
-   margin-left: map-get($spacers, 1);
    margin-top: map-get($spacers, 7);
 }
 
-// gives the bear logo and brand name space between them
-.bearStar {
-   margin-right: map-get($spacers, 6);
-}
 // turns brand name to white and adjusts font to brand name
 #brandHeader {
    color: $white;

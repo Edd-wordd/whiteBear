@@ -11430,7 +11430,10 @@ h3 {
 
 .landCardBody {
   margin-right: 48;
-  width: 25rem;
+}
+
+.landButton {
+  font-family: "Noto Sans", sans-serif, "Apple Color Emoji";
 }
 
 /*# sourceMappingURL=dist.css.map */

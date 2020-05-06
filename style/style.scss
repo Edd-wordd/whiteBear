@@ -76,13 +76,11 @@
    margin-top: 215px;
    margin-left: 275px;
 }
-
+// adds space between cards and adds width
 .landCardBody {
    margin-right: map-get($spacers, 7);
-   width: 25rem;
 }
-
-// .card-title {
-//    font-family: $font-family-serif;
-
-// }
+// adds style to buttons
+.landButton {
+   font-family: $font-family-sans-serif;
+}

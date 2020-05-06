@@ -16,12 +16,17 @@
 .tab-active {
    background-color: $gray-800;
 }
+
 // Removes border from cards
 .card {
    border: 0;
 }
+.landCards {
+   margin-top: 250px;
+}
+
 // Adjusts the text color,font, and font size in cards
-.card-body {
+.secondCard {
    color: $white;
    font-family: $font-family-serif;
    font-size: $font-size-base;
@@ -39,4 +44,22 @@
 // removes bold from navagation text
 .btn-navigation {
    font-weight: $font-weight-normal;
+}
+
+// landing page edits
+// background
+#night {
+   position: fixed;
+}
+
+// // adjusts white bear logo & name on background
+
+.topName {
+   position: absolute;
+   z-index: 10;
+}
+// turns brand name to white
+#brandHeader {
+   color: $white;
+   font-size: $h1-font-size;
 }

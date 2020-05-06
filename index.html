@@ -2,74 +2,73 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- link to bootstrap CSS -->
+      <!-- link to bootstrap -->
       <link rel="stylesheet" href="style/dist.css" />
-      <title>WB-landing-page</title>
+      <title>WB-Landing-Page</title>
    </head>
    <body>
       <img
-         class="night"
-         src="branding/background-landing.jpg"
-         alt="background night sky"
+         id="night"
+         src="images/background-landing.jpg"
+         alt="night sky"
+         width="100%"
       />
 
       <div class="container">
          <div class="row">
-            <div class="col-6">
-               <img
-                  class="bearStar"
-                  src="branding/logo-landing.png"
-                  width="250px"
-                  alt=""
-               />
-            </div>
-            <div class="col-6">
-               <h1>White Bear</h1>
-            </div>
-
-            <div class="row">
-               <div class="col-sm-6">
-                  <div class="card">
+            <div class="col-12">
+               <div class="d-flex topName">
+                  <img
+                     class="bearStar mt-5"
+                     src="Images/logo-landing.png"
+                     alt="white bear logo"
+                  />
+                  <h1 id="brandHeader">White Bear</h1>
+               </div>
+               <div class="d-flex landCards">
+                  <div class="card mr-5" style="width: 25rem;">
                      <div class="card-body">
                         <h5 class="card-title">Nice to meet you</h5>
                         <p class="card-text">
-                           Sign up for White Bear.Free forever.
+                           Sign up for White Bear.Free Forever.
                         </p>
-                        <a href="#" class="btn btn-primary">Sign Up</a>
+                        <a href="#" class="btn btn-success btn-lg btn-block"
+                           >Sign up</a
+                        >
                      </div>
                   </div>
-               </div>
-               <div class="col-sm-6">
-                  <div class="card">
-                     <div class="card-body">
-                        <h5 class="card-title">Welcome Back</h5>
-                        <p class="card-text">
-                           Log in with your email address and password.
-                        </p>
 
-                        <label for="email">Email Address</label><br />
+                  <div class="card" style="width: 25rem;">
+                     <div class="card-body">
+                        <h5 class="card-title">Welcome back</h5>
+                        <p class="card-text">
+                           Log in with your email address and password
+                        </p>
+                        <label for="email">Email Address</label>
                         <div class="input-group mb-3">
                            <div class="input-group-prepend"></div>
                            <input
-                              id="email"
-                              type="Email"
+                              type="email"
                               class="form-control"
-                              aria-label="Sizing example input"
+                              aria-label="login email"
                               aria-describedby="inputGroup-sizing-default"
+                              required
                            />
                         </div>
-                        <label for="password">Password</label><br />
+                        <label for="password">Password</label>
+
                         <div class="input-group mb-3">
                            <div class="input-group-prepend"></div>
                            <input
-                              id="password"
                               type="password"
                               class="form-control"
-                              aria-label="Sizing example input"
+                              aria-label="login password"
                               aria-describedby="inputGroup-sizing-default"
+                              required
                            />
                         </div>
-                        <a href="#" class="btn btn-primary float-right"
+
+                        <a href="#" class="btn btn-success float-right"
                            >Log in</a
                         >
                      </div>

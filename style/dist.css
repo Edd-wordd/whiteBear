@@ -1,5 +1,30 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Noto+Sans:wght@400;700&family=Noto+Serif&display=swap");
+.card {
+  position: relative;
+  display: flex;
+  z-index: 20;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.card > hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+.card > .list-group:first-child .list-group-item:first-child {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.card > .list-group:last-child .list-group-item:last-child {
+  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -11355,7 +11380,11 @@ h3 {
   border: 0;
 }
 
-.card-body {
+.landCards {
+  margin-top: 250px;
+}
+
+.secondCard {
   color: #fff;
   font-family: "Noto Serif", serif;
   font-size: 1rem;
@@ -11373,6 +11402,20 @@ h3 {
 
 .btn-navigation {
   font-weight: 400;
+}
+
+#night {
+  position: fixed;
+}
+
+.topName {
+  position: absolute;
+  z-index: 10;
+}
+
+#brandHeader {
+  color: #fff;
+  font-size: 3.75rem;
 }
 
 /*# sourceMappingURL=dist.css.map */

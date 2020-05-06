@@ -535,7 +535,7 @@ kbd {
   font-size: 87.5%;
   color: #fff;
   background-color: #212529;
-  border-radius: 0.2rem;
+  border-radius: 4;
 }
 kbd kbd {
   padding: 0;
@@ -2430,7 +2430,7 @@ textarea.form-control {
   padding: 8 1rem;
   font-size: 1rem;
   line-height: 1.5;
-  border-radius: 4;
+  border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -2916,14 +2916,14 @@ fieldset:disabled a.btn {
   padding: 8 32;
   font-size: 1.25rem;
   line-height: 1.5;
-  border-radius: 4;
+  border-radius: 0.3rem;
 }
 
 .btn-sm, .btn-group-sm > .btn {
   padding: 4 1rem;
   font-size: 0.875rem;
   line-height: 1.5;
-  border-radius: 4;
+  border-radius: 0.2rem;
 }
 
 .btn-block {
@@ -4552,7 +4552,7 @@ input[type=button].btn-block {
   display: flex;
   padding-left: 0;
   list-style: none;
-  border-radius: 0.25rem;
+  border-radius: 4;
 }
 
 .page-link {
@@ -4580,12 +4580,12 @@ input[type=button].btn-block {
 
 .page-item:first-child .page-link {
   margin-left: 0;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 4;
+  border-bottom-left-radius: 4;
 }
 .page-item:last-child .page-link {
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 4;
+  border-bottom-right-radius: 4;
 }
 .page-item.active .page-link {
   z-index: 3;
@@ -4607,12 +4607,12 @@ input[type=button].btn-block {
   line-height: 1.5;
 }
 .pagination-lg .page-item:first-child .page-link {
-  border-top-left-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
+  border-top-left-radius: 4;
+  border-bottom-left-radius: 4;
 }
 .pagination-lg .page-item:last-child .page-link {
-  border-top-right-radius: 0.3rem;
-  border-bottom-right-radius: 0.3rem;
+  border-top-right-radius: 4;
+  border-bottom-right-radius: 4;
 }
 
 .pagination-sm .page-link {
@@ -4621,12 +4621,12 @@ input[type=button].btn-block {
   line-height: 1.5;
 }
 .pagination-sm .page-item:first-child .page-link {
-  border-top-left-radius: 0.2rem;
-  border-bottom-left-radius: 0.2rem;
+  border-top-left-radius: 4;
+  border-bottom-left-radius: 4;
 }
 .pagination-sm .page-item:last-child .page-link {
-  border-top-right-radius: 0.2rem;
-  border-bottom-right-radius: 0.2rem;
+  border-top-right-radius: 4;
+  border-bottom-right-radius: 4;
 }
 
 .badge {
@@ -4773,7 +4773,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
   background-color: #e9ecef;
-  border-radius: 0.3rem;
+  border-radius: 4;
 }
 @media (min-width: 576px) {
   .jumbotron {
@@ -6184,35 +6184,35 @@ button.bg-dark:focus {
 }
 
 .rounded-sm {
-  border-radius: 0.2rem !important;
+  border-radius: 4 !important;
 }
 
 .rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 4 !important;
 }
 
 .rounded-top {
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 4 !important;
+  border-top-right-radius: 4 !important;
 }
 
 .rounded-right {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-top-right-radius: 4 !important;
+  border-bottom-right-radius: 4 !important;
 }
 
 .rounded-bottom {
-  border-bottom-right-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 4 !important;
+  border-bottom-left-radius: 4 !important;
 }
 
 .rounded-left {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 4 !important;
+  border-bottom-left-radius: 4 !important;
 }
 
 .rounded-lg {
-  border-radius: 0.3rem !important;
+  border-radius: 4 !important;
 }
 
 .rounded-circle {
@@ -11357,6 +11357,13 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.background-image {
+  background-image: url("../images/background-landing.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
 .btn-link {
   padding-left: 0;
   padding-right: 0;
@@ -11399,10 +11406,6 @@ h3 {
 
 .btn-navigation {
   font-weight: 400;
-}
-
-#night {
-  position: fixed;
 }
 
 .topName {

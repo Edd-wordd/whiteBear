@@ -1,3 +1,11 @@
+// background
+.background-image {
+   background-image: url("../images/background-landing.jpg");
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   background-attachment: fixed;
+}
+
 .btn-link {
    padding-left: 0;
    padding-right: 0;
@@ -45,10 +53,6 @@
 }
 
 // LANDING PAGE EDITS
-// background
-#night {
-   position: fixed;
-}
 
 // // adjusts white bear logo & name on background
 

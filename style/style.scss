@@ -71,10 +71,6 @@
    margin-top: 215px;
 }
 
-// adds space between cards and adds width
-.landCardBody {
-   margin-right: map-get($spacers, 7);
-}
 // adds style to buttons
 .landButton {
    font-family: $font-family-sans-serif;

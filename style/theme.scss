@@ -223,11 +223,14 @@ $input-padding-y-lg: $input-btn-padding-y-lg;
 $input-padding-x-lg: $input-btn-padding-x-lg;
 
 // Input border-radius
-$input-border-radius: $border-radius;
+$btn-border-radius: $border-radius;
+$btn-border-radius-lg: $border-radius-lg;
+$btn-border-radius-sm: $border-radius-sm;
 
-$border-radius: 5rem;
+$border-radius: 0.25rem;
 $border-radius-lg: 0.3rem;
 $border-radius-sm: 0.2rem;
+$input-border-radius: $border-radius;
 
 $border-width: 2px;
 $border-color: $gray-600;

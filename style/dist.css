@@ -11378,10 +11378,7 @@ h3 {
 
 .card {
   border: 0;
-}
-
-.landCards {
-  margin-top: 250px;
+  font-family: "Noto Serif", serif;
 }
 
 .secondCard {
@@ -11411,7 +11408,8 @@ h3 {
 .topName {
   position: absolute;
   z-index: 10;
-  margin-left: 128;
+  margin-left: 4;
+  margin-top: 48;
 }
 
 .bearStar {
@@ -11421,6 +11419,17 @@ h3 {
 #brandHeader {
   color: #fff;
   font-size: 3.75rem;
+  font-family: "Fira Sans";
+  font-weight: 400;
+}
+
+.landCards {
+  margin-top: 215px;
+  margin-left: 275px;
+}
+
+.landCardBody {
+  margin-right: 48;
 }
 
 /*# sourceMappingURL=dist.css.map */

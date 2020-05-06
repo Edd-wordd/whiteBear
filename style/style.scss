@@ -20,10 +20,7 @@
 // Removes border from cards
 .card {
    border: 0;
-}
-// moves landing cards down the page
-.landCards {
-   margin-top: 250px;
+   font-family: $font-family-serif;
 }
 
 // Adjusts the text color,font, and font size in cards
@@ -47,7 +44,7 @@
    font-weight: $font-weight-normal;
 }
 
-// landing page edits
+// LANDING PAGE EDITS
 // background
 #night {
    position: fixed;
@@ -58,15 +55,33 @@
 .topName {
    position: absolute;
    z-index: 10;
-   margin-left: map-get($spacers, 9);
+   margin-left: map-get($spacers, 1);
+   margin-top: map-get($spacers, 7);
 }
 
 // gives the bear logo and brand name space between them
 .bearStar {
    margin-right: map-get($spacers, 6);
 }
-// turns brand name to white
+// turns brand name to white and adjusts font to brand name
 #brandHeader {
    color: $white;
    font-size: $h1-font-size;
+   font-family: $font-family-brand;
+   font-weight: $font-weight-normal;
 }
+
+// moves landing cards down the page
+.landCards {
+   margin-top: 215px;
+   margin-left: 275px;
+}
+
+.landCardBody {
+   margin-right: map-get($spacers, 7);
+}
+
+// .card-title {
+//    font-family: $font-family-serif;
+
+// }

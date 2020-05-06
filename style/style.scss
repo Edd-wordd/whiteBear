@@ -4,39 +4,39 @@
    font-weight: $font-weight-bold;
    border: 0;
 }
-
+// designers font choice
 .text-brand {
    font-family: $font-family-brand;
 }
-
+// adds middle bars between navagation buttons
 .tab-separator {
    border-left: 1px $gray-800 solid;
 }
-
+// darkens button to make it active
 .tab-active {
    background-color: $gray-800;
 }
-
+// Removes border from cards
 .card {
    border: 0;
 }
-
+// Adjusts the text color,font, and font size in cards
 .card-body {
    color: $white;
    font-family: $font-family-serif;
    font-size: $font-size-base;
 }
-
+// makes the top card bottom corners rounded
 .card.bg-primary {
    border-bottom-left-radius: 0;
    border-bottom-right-radius: 0;
 }
-
+// makes the bottom card top corners pointed
 .card.bg-secondary {
    border-top-left-radius: 0;
    border-top-right-radius: 0;
 }
-
+// removes bold from navagation text
 .btn-navigation {
    font-weight: $font-weight-normal;
 }

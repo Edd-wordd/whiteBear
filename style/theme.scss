@@ -1,300 +1,175 @@
-$gray-050: #e5e6e8;
-$gray-100: #cccdd2;
-$gray-200: #b4b4bb;
-$gray-300: #999aa4;
-$gray-400: #80818d;
-$gray-500: #666877;
-$gray-600: #52535f;
-$gray-700: #3d3e47;
-$gray-800: #292a30;
-$gray-900: #141518;
+// // color pallette
 
-$blue-050: #dae8f4;
-$blue-100: #bfccf5;
-$blue-200: #97adf1;
-$blue-300: #7693ec;
-$blue-400: #587be7;
-$blue-500: #4366d3;
-$blue-600: #2f52b9;
-$blue-700: #1c3688;
-$blue-800: #0c205a;
-$blue-900: #010b2d;
+// $white: #fff;
+// $black: #000;
 
-$red-050: #f6dce2;
-$red-100: #ecb8c5;
-$red-200: #e38ea3;
-$red-300: #da6a84;
-$red-400: #cb4666;
-$red-500: #c13958;
-$red-600: #a42443;
-$red-700: #770d26;
-$red-800: #500416;
-$red-900: #290505;
+// $gray-050: #e5e6e8;
+// $gray-100: #cccdd2;
+// $gray-200: #b4b4bb;
+// $gray-300: #999aa4;
+// $gray-400: #80818d;
+// $gray-500: #666877;
+// $gray-600: #52535f;
+// $gray-700: #3d3e47;
+// $gray-800: #292a30;
+// $gray-900: #141518;
 
-$spacer: 1rem; // 16px in most browsers
-$spacers: ();
-// stylelint-disable-next-line scss/dollar-variable-default
-$spacers: map-merge(
-   (
-      0: 0,
-      // 0px
-         1:
-         (
-            $spacer * 0.25,
-         ),
-      // 4px
-         2:
-         (
-            $spacer * 0.5,
-         ),
-      // 8px
-         3:
-         (
-            $spacer * 0.75,
-         ),
-      // 12px
-         4: $spacer,
-      // 16px
-         5:
-         (
-            $spacer * 1.5,
-         ),
-      // 24px
-         6:
-         (
-            $spacer * 2,
-         ),
-      // 32px
-         7:
-         (
-            $spacer * 3,
-         ),
-      // 48px
-         8:
-         (
-            $spacer * 4,
-         ),
-      // 64px
-         9:
-         (
-            $spacer * 8,
-         )
-         // 128px,,,,,,,,,,,,,,,,
-   ),
-   $spacers
-);
-.night {
-   position: absolute;
-   z-index: 1;
-}
-.bearStar {
-   position: absolute;
-   z-index: 2;
-}
-.card {
-   position: absolute;
-   display: flex;
-   z-index: 10;
-   flex-direction: column;
-   min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-   height: $card-height;
-   word-wrap: break-word;
-   background-color: $card-bg;
-   background-clip: border-box;
-   border: $card-border-width solid $card-border-color;
-   @include border-radius($card-border-radius);
+// $blue-050: #dae8f4;
+// $blue-100: #bfccf5;
+// $blue-200: #97adf1;
+// $blue-300: #7693ec;
+// $blue-400: #587be7;
+// $blue-500: #4366d3;
+// $blue-600: #2f52b9;
+// $blue-700: #1c3688;
+// $blue-800: #0c205a;
+// $blue-900: #010b2d;
 
-   > hr {
-      margin-right: 0;
-      margin-left: 0;
-   }
+// $red-050: #f6dce2;
+// $red-100: #ecb8c5;
+// $red-200: #e38ea3;
+// $red-300: #da6a84;
+// $red-400: #cb4666;
+// $red-500: #c13958;
+// $red-600: #a42443;
+// $red-700: #770d26;
+// $red-800: #500416;
+// $red-900: #290505;
 
-   > .list-group:first-child {
-      .list-group-item:first-child {
-         @include border-top-radius($card-border-radius);
-      }
-   }
+// $spacer: 1rem; // 16px in most browsers
+// $spacers: ();
+// $spacers: map-merge(
+//    (
+//       0: 0,
+//       // 0px
+//          1:
+//          (
+//             $spacer * 0.25,
+//          ),
+//       // 4px
+//          2:
+//          (
+//             $spacer * 0.5,
+//          ),
+//       // 8px
+//          3:
+//          (
+//             $spacer * 0.75,
+//          ),
+//       // 12px
+//          4: $spacer,
+//       // 16px
+//          5:
+//          (
+//             $spacer * 1.5,
+//          ),
+//       // 24px
+//          6:
+//          (
+//             $spacer * 2,
+//          ),
+//       // 32px
+//          7:
+//          (
+//             $spacer * 3,
+//          ),
+//       // 48px
+//          8:
+//          (
+//             $spacer * 4,
+//          ),
+//       // 64px
+//          9:
+//          (
+//             $spacer * 8,
+//          )
+//          // 128px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+//    ),
+//    $spacers
+// );
+// $spacer: 1rem;
+// $spacers: ();
+// $spacers: map-merge(
+//    (
+//       0: 0,
+//       1: (
+//          $spacer * 0.25,
+//       ),
+//       2: (
+//          $spacer * 0.5,
+//       ),
+//       3: $spacer,
+//       4: (
+//          $spacer * 1.5,
+//       ),
+//       5: (
+//          $spacer * 3,
+//       ),
+//    ),
+//    $spacers
+// );
 
-   > .list-group:last-child {
-      .list-group-item:last-child {
-         @include border-bottom-radius($card-border-radius);
-      }
-   }
-}
+// $grays: ();
+// $grays: map-merge(
+//    (
+//       "100": $gray-100,
+//       "200": $gray-200,
+//       "300": $gray-300,
+//       "400": $gray-400,
+//       "500": $gray-500,
+//       "600": $gray-600,
+//       "700": $gray-700,
+//       "800": $gray-800,
+//       "900": $gray-900,
+//    ),
+//    $grays
+// );
 
-.card-body {
-   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
-   // as much space as possible, ensuring footers are aligned to the bottom.
-   flex: 1 1 auto;
-   // Workaround for the image size bug in IE
-   // See: https://github.com/twbs/bootstrap/pull/28855
-   min-height: 1px;
-   padding: $card-spacer-x;
-   color: $card-color;
-}
+// $blue: $blue-600;
+// $red: $red-600;
 
-.card-title {
-   margin-bottom: $card-spacer-y;
-}
+// $primary: $gray-600;
+// $success: $blue-600;
+// $danger: $red-600;
+// $light: $gray-100;
+// $dark: $gray-800;
 
-.card-subtitle {
-   margin-top: -$card-spacer-y / 2;
-   margin-bottom: 0;
-}
+// $theme-colors: ();
+// $theme-colors: map-merge(
+//    (
+//       "primary": $primary,
+//       "secondary": $secondary,
+//       "success": $success,
+//       "info": $info,
+//       "warning": $warning,
+//       "danger": $danger,
+//       "light": $light,
+//       "dark": $dark,
+//    ),
+//    $theme-colors
+// );
 
-.card-text:last-child {
-   margin-bottom: 0;
-}
+// // LINKS
+// $link-color: theme-color("primary");
+// $link-decoration: none;
+// $link-hover-color: darken($link-color, 15%);
+// $link-hover-decoration: underline;
+// // Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+// $emphasized-link-hover-darken-percentage: 15%;
 
-.card-link {
-   @include hover() {
-      text-decoration: none;
-   }
+// // FONTS
+// font-size-base: 1rem; // Assumes the browser default, typically `16px`
+// $font-size-lg: $font-size-base * 1.25;
+// $font-size-sm: $font-size-base * 0.875;
+// $h1-font-size: $font-size-base * 2.5;
+// $h2-font-size: $font-size-base * 1.6875;
+// $h3-font-size: $font-size-base * 1.25;
+// $h4-font-size: $font-size-base * 1.25;
 
-   + .card-link {
-      margin-left: $card-spacer-x;
-   }
-}
-
-//
-// Optional textual caps
-//
-
-.card-header {
-   padding: $card-spacer-y $card-spacer-x;
-   margin-bottom: 0; // Removes the default margin-bottom of <hN>
-   color: $card-cap-color;
-   background-color: $card-cap-bg;
-   border-bottom: $card-border-width solid $card-border-color;
-
-   &:first-child {
-      @include border-radius(
-         $card-inner-border-radius $card-inner-border-radius 0 0
-      );
-   }
-
-   + .list-group {
-      .list-group-item:first-child {
-         border-top: 0;
-      }
-   }
-}
-
-.card-footer {
-   padding: $card-spacer-y $card-spacer-x;
-   background-color: $card-cap-bg;
-   border-top: $card-border-width solid $card-border-color;
-
-   &:last-child {
-      @include border-radius(
-         0 0 $card-inner-border-radius $card-inner-border-radius
-      );
-   }
-}
-
-// Card deck
-
-.card-deck {
-   .card {
-      margin-bottom: $card-deck-margin;
-   }
-
-   @include media-breakpoint-up(sm) {
-      display: flex;
-      flex-flow: row wrap;
-      margin-right: -$card-deck-margin;
-      margin-left: -$card-deck-margin;
-
-      .card {
-         // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
-         flex: 1 0 0%;
-         margin-right: $card-deck-margin;
-         margin-bottom: 0; // Override the default
-         margin-left: $card-deck-margin;
-      }
-   }
-}
-
-//
-// Card groups
-//
-
-.card-group {
-   // The child selector allows nested `.card` within `.card-group`
-   // to display properly.
-   > .card {
-      margin-bottom: $card-group-margin;
-   }
-
-   @include media-breakpoint-up(sm) {
-      display: flex;
-      flex-flow: row wrap;
-      // The child selector allows nested `.card` within `.card-group`
-      // to display properly.
-      > .card {
-         // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
-         flex: 1 0 0%;
-         margin-bottom: 0;
-
-         + .card {
-            margin-left: 0;
-            border-left: 0;
-         }
-
-         // Handle rounded corners
-         @if $enable-rounded {
-            &:not(:last-child) {
-               @include border-right-radius(0);
-
-               .card-img-top,
-               .card-header {
-                  // stylelint-disable-next-line property-blacklist
-                  border-top-right-radius: 0;
-               }
-               .card-img-bottom,
-               .card-footer {
-                  // stylelint-disable-next-line property-blacklist
-                  border-bottom-right-radius: 0;
-               }
-            }
-
-            &:not(:first-child) {
-               @include border-left-radius(0);
-
-               .card-img-top,
-               .card-header {
-                  // stylelint-disable-next-line property-blacklist
-                  border-top-left-radius: 0;
-               }
-               .card-img-bottom,
-               .card-footer {
-                  // stylelint-disable-next-line property-blacklist
-                  border-bottom-left-radius: 0;
-               }
-            }
-         }
-      }
-   }
-}
-
-//
-// Columns
-//
-
-.card-columns {
-   .card {
-      margin-bottom: $card-columns-margin;
-   }
-
-   @include media-breakpoint-up(sm) {
-      column-count: $card-columns-count;
-      column-gap: $card-columns-gap;
-      orphans: 1;
-      widows: 1;
-
-      .card {
-         display: inline-block; // Don't let them vertically span multiple columns
-         width: 100%; // Don't let their width change
-      }
-   }
-}
+// // stylelint-disable value-keyword-case
+// $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+//    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+//    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+// $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+//    "Liberation Mono", "Courier New", monospace;
+// $font-family-base: $font-family-sans-serif;

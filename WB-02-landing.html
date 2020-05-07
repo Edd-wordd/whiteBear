@@ -2,101 +2,87 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- link to bootstrap -->
       <link rel="stylesheet" href="style/dist.css" />
-      <title>WB-landing-02</title>
+      <title>WB-Landing-page</title>
    </head>
-   <body>
-      <img
-         id="night"
-         src="images/background-landing.jpg"
-         alt="night sky"
-         width="100%"
-      />
-
+   <body class="background-image">
       <div class="container">
          <div class="row">
             <div class="col-12">
-               <div class="d-flex topName">
+               <div class="row">
                   <img
-                     class="bearStar mt-5"
+                     class="ml-3 mt-5 bearStar"
                      src="Images/logo-landing.png"
                      alt="white bear logo"
                   />
-                  <h1 id="brandHeader">White Bear</h1>
+                  <h1 class="ml-3 mt-5" id="brandHeader">
+                     White Bear
+                  </h1>
                </div>
-               <div class="d-flex landCards">
-                  <div class="card mr-5" style="width: 25rem;">
-                     <div class="card-body">
-                        <h5 class="card-title">Nice to meet you</h5>
-                        <p class="card-text">
-                           Sign up for White Bear.Free Forever.
-                        </p>
-                        <p class="card-text">
-                           Let's get you signed up.
-                        </p>
-                        <label for="email">Email Address</label>
-                        <div class="input-group mb-3">
-                           <div class="input-group-prepend"></div>
-                           <input
-                              type="email"
-                              class="form-control"
-                              aria-label="login email"
-                              aria-describedby="inputGroup-sizing-default"
-                              required
-                           />
-                        </div>
-                        <label for="password"> Create a password</label>
+               <div class="row landCards">
+                  <div
+                     class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-2 col-lg-3 offset-xl-1 col-xl-5"
+                  >
+                     <div class="card p-3 mb-5">
+                        <h2 class="card-title">Nice to meet you</h2>
+                        <p>Log in with your email address and password.</p>
+                        <p>Let's get you signed up.</p>
 
-                        <div class="input-group mb-3">
-                           <div class="input-group-prepend"></div>
-                           <input
-                              type="password"
-                              class="form-control"
-                              aria-label="login password"
-                              aria-describedby="inputGroup-sizing-default"
-                              required
-                           />
-                        </div>
-                        <a href="#" class="btn btn-success btn-lg btn-block"
-                           >Let's go!</a
-                        >
+                        <form>
+                           <div class="form-group">
+                              <label for="email">Email address</label>
+                              <input
+                                 type="email"
+                                 class="form-control"
+                                 id="email"
+                              />
+                           </div>
+                           <div class="form-group">
+                              <label for="password">Create a password</label>
+                              <input
+                                 type="password"
+                                 class="form-control"
+                                 id="password"
+                              />
+                           </div>
+                           <a
+                              href="WB-03-create-answer.html"
+                              class="btn btn-success float-right btn-block"
+                              >Let's go!</a
+                           >
+                        </form>
                      </div>
                   </div>
+                  <div
+                     class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-1 col-lg-3 offset-xl-1 col-xl-5"
+                  >
+                     <div class="card p-3 mb-5">
+                        <h2 class="card-title">Welcome back</h2>
+                        <p>Log in with your email address and password.</p>
 
-                  <div class="card" style="width: 25rem;">
-                     <div class="card-body">
-                        <h5 class="card-title">Welcome back</h5>
-                        <p class="card-text">
-                           Log in with your email address and password
-                        </p>
-                        <label for="email">Email Address</label>
-                        <div class="input-group mb-3">
-                           <div class="input-group-prepend"></div>
-                           <input
-                              type="email"
-                              class="form-control"
-                              aria-label="login email"
-                              aria-describedby="inputGroup-sizing-default"
-                              required
-                           />
-                        </div>
-                        <label for="password">Password</label>
-
-                        <div class="input-group mb-3">
-                           <div class="input-group-prepend"></div>
-                           <input
-                              type="password"
-                              class="form-control"
-                              aria-label="login password"
-                              aria-describedby="inputGroup-sizing-default"
-                              required
-                           />
-                        </div>
-
-                        <a href="#" class="btn btn-success float-right"
-                           >Log in</a
-                        >
+                        <form>
+                           <div class="form-group">
+                              <label for="email">Email address</label>
+                              <input
+                                 type="email"
+                                 class="form-control"
+                                 id="email"
+                              />
+                           </div>
+                           <div class="form-group">
+                              <label for="password">Password</label>
+                              <input
+                                 type="password"
+                                 class="form-control"
+                                 id="password"
+                              />
+                           </div>
+                           <a
+                              href="WB-03-create-answer.html"
+                              class="btn btn-success float-right"
+                              >Log in</a
+                           >
+                        </form>
                      </div>
                   </div>
                </div>

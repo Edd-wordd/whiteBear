@@ -2,82 +2,67 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- link to bootstrap -->
       <link rel="stylesheet" href="style/dist.css" />
-      <title>WB-Landing-Page</title>
+      <title>WB-Landing-page</title>
    </head>
    <body class="background-image">
-   
-
-      <div class="container-fluid">
+      <div class="container">
          <div class="row">
             <div class="col-12">
-               <div class="d-flex topName">
+               <div class="row">
                   <img
-                     class="bearStar "
+                     class="ml-3 mt-5 bearStar"
                      src="Images/logo-landing.png"
                      alt="white bear logo"
                   />
-                  <h1 id="brandHeader">White Bear</h1>
+                  <h1 class="ml-3 mt-5" id="brandHeader">
+                     White Bear
+                  </h1>
                </div>
-               <div class=" landCards w-50 d-flex flex-direction flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column" >
-                  
-                     <div class="card landCardBody h-50 mb-5 col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 offset-sm-3 col-12 offset-5
-                     ">
-                        <div class="card-body " >
-                           <h2 class="card-title">Nice to meet you</h2>
-                           <p>
-                              Sign up for White Bear.Free forever.
-                           </p>
-                           <button
-                              class="btn btn-success btn-lg btn-block landButton">
-                        
-                              Sign up
-                           </button>
-                        </div>
+               <div class="row landCards">
+                  <div
+                     class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-2 col-lg-3 offset-xl-1 col-xl-5"
+                  >
+                     <div class="card p-3 mb-5">
+                        <h2 class="card-title">Nice to meet you</h2>
+                        <p>Sign up for White Bear. Free forever</p>
+                        <a
+                           href="WB-02-landing.html"
+                           class="btn btn-success float-right"
+                           >Sign up</a
+                        >
                      </div>
-               
-                  
-                     
-                  
-                     <div class="card landCardBody col-xl-8 offset-xl-2 col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-12 offset-sm-3 col-12 offset-5">
-                        <div class="card-body">
-                           <h2 class="card-title">Welcome back</h2>
-                           <p class="card-text">
-                              Log in with your email address and password
-                           </p>
-                           <label for="email">Email Address</label>
-                           <div class="input-group mb-3">
-                              <div class="input-group-prepend"></div>
+                  </div>
+                  <div
+                     class="offset-1 col-10 offset-sm-2 col-sm-8 offset-md-1 col-md-4 offset-lg-1 col-lg-3 offset-xl-1 col-xl-5"
+                  >
+                     <div class="card p-3 mb-5">
+                        <h2 class="card-title">Welcome back</h2>
+                        <p>Log in with your email address and password.</p>
+
+                        <form>
+                           <div class="form-group">
+                              <label for="email">Email address</label>
                               <input
                                  type="email"
                                  class="form-control"
-                                 aria-label="login email"
-                                 aria-describedby="inputGroup-sizing-default"
-                                 required
+                                 id="email"
                               />
                            </div>
-                           <label for="password">Password</label>
-
-                           <div class="input-group mb-3">
-                              <div class="input-group-prepend"></div>
+                           <div class="form-group">
+                              <label for="password">Password</label>
                               <input
                                  type="password"
                                  class="form-control"
-                                 aria-label="login password"
-                                 aria-describedby="inputGroup-sizing-default"
-                                 required
+                                 id="password"
                               />
                            </div>
-                           
-
-                           <button
-                              class="btn btn-success float-right landButton"
+                           <a
+                              href="WB-03-create-answer.html"
+                              class="btn btn-success float-right"
+                              >Log in</a
                            >
-                              Log in
-                           </button>
-                        </div>
-                     </div>
+                        </form>
                      </div>
                   </div>
                </div>

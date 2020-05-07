@@ -82,6 +82,11 @@
 
 textarea {
    background: transparent;
+}
+.card textarea {
+   color: $white;
+}
+.card.bg-primary textarea {
    border: none;
    overflow: auto;
    outline: none;
@@ -91,4 +96,8 @@ textarea {
    box-shadow: none;
 
    resize: none;
+}
+.bg-success,
+.bg-danger p.lead {
+   color: $white;
 }

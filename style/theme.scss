@@ -105,7 +105,8 @@ $spacers: map-merge(
    ),
    $spacers
 );
-
+// removes padding from "p" element
+$paragraph-margin-bottom: 0;
 // LINKS
 
 $link-color: theme-color("primary");
@@ -138,42 +139,15 @@ $h2-font-size: $font-size-base * 1.6875;
 $h3-font-size: $font-size-base * 1.25;
 $h4-font-size: $font-size-base * 1.25;
 
+$text-muted: $gray-400;
+$lead-font-size: $font-size-base * 1.25;
+$lead-font-weight: $font-weight-normal;
+
 // CARDS
 
 $card-spacer-y: map-get($spacers, 4);
 $card-spacer-x: map-get($spacers, 4);
 $card-border-width: $border-width;
-
-// .card {
-//    position: relative;
-//    display: flex;
-//    z-index: 20;
-//    flex-direction: column;
-//    min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
-//    height: $card-height;
-//    word-wrap: break-word;
-//    background-color: $card-bg;
-//    background-clip: border-box;
-//    border: $card-border-width solid $card-border-color;
-//    @include border-radius($card-border-radius);
-
-//    > hr {
-//       margin-right: 0;
-//       margin-left: 0;
-//    }
-
-//    > .list-group:first-child {
-//       .list-group-item:first-child {
-//          @include border-top-radius($card-border-radius);
-//       }
-//    }
-
-//    > .list-group:last-child {
-//       .list-group-item:last-child {
-//          @include border-bottom-radius($card-border-radius);
-//       }
-//    }
-// }
 
 // BORDER
 
@@ -191,23 +165,35 @@ $border-radius-sm: $border-radius;
 
 $input-btn-padding-y: map-get($spacers, 2);
 $input-btn-padding-x: map-get($spacers, 4);
+$input-btn-font-size: $font-size-base;
+$input-btn-line-height: $line-height-base;
 
 $input-btn-padding-y-sm: map-get($spacers, 1);
 $input-btn-padding-x-sm: map-get($spacers, 4);
+$input-btn-font-size-sm: $font-size-base;
+$input-btn-line-height-sm: $line-height-base;
 
 $input-btn-padding-y-lg: map-get($spacers, 2);
 $input-btn-padding-x-lg: map-get($spacers, 6);
+$input-btn-font-size-lg: $font-size-base;
+$input-btn-line-height-lg: $line-height-base;
 
 // BUTTONS
 
 $btn-padding-y: $input-btn-padding-y;
 $btn-padding-x: $input-btn-padding-x;
+$btn-font-size: $font-size-base;
+$btn-line-height: $line-height-base;
 
 $btn-padding-y-sm: $input-btn-padding-y-sm;
 $btn-padding-x-sm: $input-btn-padding-x-sm;
+$btn-font-size-sm: $font-size-base;
+$btn-line-height-sm: $line-height-base;
 
 $btn-padding-y-lg: $input-btn-padding-y-lg;
 $btn-padding-x-lg: $input-btn-padding-x-lg;
+$btn-font-size-lg: $font-size-base;
+$btn-line-height-lg: $line-height-base;
 
 $btn-font-weight: $font-weight-bold;
 
@@ -215,12 +201,18 @@ $btn-font-weight: $font-weight-bold;
 
 $input-padding-y: $input-btn-padding-y;
 $input-padding-x: $input-btn-padding-x;
+$input-font-size: $font-size-base;
+$input-line-height: $line-height-base;
 
 $input-padding-y-sm: $input-btn-padding-y-sm;
 $input-padding-x-sm: $input-btn-padding-x-sm;
+$input-font-size-sm: $font-size-base;
+$input-line-height-sm: $line-height-base;
 
 $input-padding-y-lg: $input-btn-padding-y-lg;
 $input-padding-x-lg: $input-btn-padding-x-lg;
+$input-font-size-lg: $font-size-base;
+$input-line-height-lg: $line-height-base;
 
 // Input border-radius
 $border-width: 2px;

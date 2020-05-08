@@ -58,14 +58,14 @@
                
                   <form class="form-inline row ">
                      <input
-                        class="form-control mr-sm-2 col-6 mr-2 ml-3"
+                        class="form-control btn-sm mr-sm-2 col-6 mr-2 ml-3"
                         type="search"
                         placeholder="Search for a word"
                         aria-label="Search"
                      />
                      <a
                         class="btn btn-outline-secondary btn-sm my-2 my-sm-0 col-5"
-                        type="submit"
+                        
                      >
                         Search
                      </a>
@@ -75,36 +75,24 @@
                <!-- dropdown button -->
                
                <div class="dropdown row  mb-5">
-                  <p class="col-6 ml-3 mr-2">Sort cards by</p>
-                  <a
-                     class="btn btn-outline-secondary dropdown-toggle w-50 col-5"
-                     type="button"
-                     id="dropdownMenuButton"
-                     data-toggle="dropdown"
-                     aria-haspopup="true"
-                     aria-expanded="false"
-                  >
-                     Most Recent
-                  </button>
-                  <div
+                  <p class="col-6 ml-3 mr-2 mt-2">Sort cards by</p>
+                  
+                  <select class="btn btn-outline-secondary mb-5  mr-2 col-5 ">
+                        <option selected>Most recent</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
 
-                     class="dropdown-menu"
-                     aria-labelledby="dropdownMenuButton"
-                  >
-                     <a class="dropdown-item" href="#">Action</a>
-                     <a class="dropdown-item" href="#">Another action</a>
-                     <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-               </div>
+                  </select>
         
-               <!-- cards -->
+                  <!-- cards -->
 
                <div class="mb-5">
                   
                 <a href="#" class="btn btn-link float-right ml-5 col-2"><img src="icons /edit.svg" width="20px;">Edit</a>
                 
 
-                  <div class="card bg-primary col-9 ">
+                  <div class="card bg-primary col-9 offset-1">
                      <div class="card-body secondCard">
                         The quick, brown fox jumps over a lazy dog. DJs flock by
                         when MTV ax quiz prog. Junk MTV quiz graced by fox
@@ -134,7 +122,7 @@
                   
                   <a href="#" class="btn btn-link float-right ml-5 col-2"><img   src="icons /edit.svg" width="20px;">Edit</a>
                   
-                  <div class="card bg-secondary col-9">
+                  <div class="card bg-secondary col-9 offset-1">
                      <div class="card-body secondCard">
                         The quick, brown fox jumps over a lazy dog. DJs flock by
                         when MTV ax quiz prog. Junk MTV quiz graced by fox
@@ -162,7 +150,7 @@
                </div>
                <!-- edit button -->
                <a href="all-cards-edit.html" 
-               class="btn btn-link">Edit</a>
+               class="btn btn-link offset-1">Edit</a>
                <div class="float-right">
                   <a class="btn btn-outline-primary mr-4">
                      Needs Work

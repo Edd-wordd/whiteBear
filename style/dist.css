@@ -11333,7 +11333,7 @@ h3 {
   }
 }
 .background-image {
-  background-image: url(/Images/background-landing.jpg);
+  background-image: url("/Images/background-landing.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;

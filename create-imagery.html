@@ -7,6 +7,7 @@
       <title>Create-Imagery</title>
    </head>
    <body>
+      <!-- success banner when user clicks save -->
       <div
          id="success-banner"
          class="bg-success w-100 py-4 justify-content-center fixed-top d-none"
@@ -19,6 +20,8 @@
          />
          <p class="lead">Card created!</p>
       </div>
+      <!-- end success banner -->
+      <!-- error banner when user clicks back -->
       <div
          id="error-banner"
          class="bg-danger w-100 py-4 justify-content-center fixed-top d-none"
@@ -31,11 +34,13 @@
          />
          <p class="lead">Oops! Our bad. Please try again.</p>
       </div>
+      <!-- end error banner -->
       <div class="container">
          <div class="row">
             <div
                class="col-12 col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1"
             >
+               <!-- top bear logo and log out button -->
                <img
                   src="Images/logo-app.svg"
                   alt="white bear logo"
@@ -49,7 +54,8 @@
                >
                   Log Out
                </a>
-
+               <!-- end top logo and log out button -->
+               <!-- top nav buttons -->
                <div
                   class="btn-group d-flex"
                   role="navigation"
@@ -74,10 +80,11 @@
                      All cards
                   </a>
                </div>
+               <!-- end top nav buttons -->
                <h4 class="my-4 text-center text-muted">
                   Add memorable imagery
                </h4>
-
+               <!-- begin cards -->
                <div class="mb-2">
                   <div class="card bg-primary">
                      <div class="card-body secondCard">
@@ -96,7 +103,8 @@
                      </div>
                   </div>
                </div>
-
+               <!-- end cards -->
+               <!-- begin button buttons -->
                <p class="float-right mb-5">0/300</p>
                <div class="clearfix"></div>
                <a href="#" class="btn btn-link" id="backToAnswer">
@@ -115,6 +123,7 @@
                      style="margin-top: 5px; margin-right: 8px;"
                   />Save
                </a>
+               <!-- end bottom buttons -->
             </div>
          </div>
       </div>

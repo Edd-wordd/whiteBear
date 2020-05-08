@@ -21,3 +21,7 @@ $("#backToAnswer").click(function () {
 $("#delete-input").click(function () {
    $("#delete-card").toggleClass("d-none");
 });
+
+focusMethod = function getFocus() {
+   document.getElementById("page1").focus();
+};

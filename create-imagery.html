@@ -13,11 +13,23 @@
       >
          <img
             src="icons /success.svg"
-            alt="error message"
+            alt="success message"
             width="28px;"
             style="margin-bottom: 5px;"
          />
          <p class="lead">Card created!</p>
+      </div>
+      <div
+         id="error-banner"
+         class="bg-danger w-100 py-4 justify-content-center fixed-top d-none"
+      >
+         <img
+            src="/icons /error.svg"
+            alt="error message"
+            width="28px;"
+            style="margin-bottom: 5px;"
+         />
+         <p class="lead">Oops! Our bad. Please try again.</p>
       </div>
       <div class="container">
          <div class="row">
@@ -87,7 +99,11 @@
 
                <p class="float-right mb-5">0/300</p>
                <div class="clearfix"></div>
-               <a href="create-answer.html" class="btn btn-link">
+               <a
+                  href="create-answer.html"
+                  class="btn btn-link"
+                  id="backToAnswer"
+               >
                   Back to answer
                </a>
 

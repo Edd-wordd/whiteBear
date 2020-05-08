@@ -222,3 +222,8 @@ $input-btn-border-width: $border-width;
 $input-border-color: $secondary;
 
 $input-border-width: $input-btn-border-width;
+
+$component-active-color: $white;
+$component-active-bg: theme-color("primary");
+$custom-control-indicator-checked-color: $component-active-color;
+$custom-control-indicator-checked-bg: $component-active-bg;

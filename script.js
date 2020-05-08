@@ -18,7 +18,7 @@ $("#backToAnswer").click(function () {
    $("#error-banner").toggleClass("d-flex d-none");
 });
 // toggles the delete button
-$("#delete-input").click(function () {
+$("#customCheck1").click(function () {
    $("#delete-card").toggleClass("d-none");
 });
 

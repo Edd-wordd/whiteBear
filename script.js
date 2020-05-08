@@ -10,6 +10,10 @@ $(".car").click(function () {
 $("#save-imagery").click(function () {
    $("#success-banner").toggleClass("d-flex d-none");
 });
+// $("#save-imagery").click(function () {
+//    $("#success-banner").slideToggle("slow");
+// });
+
 $("#backToAnswer").click(function () {
    $("#error-banner").toggleClass("d-flex d-none");
 });

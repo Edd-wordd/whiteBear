@@ -8,7 +8,7 @@
    </head>
    <body>
       <!-- success banner when user clicks save -->
-      <div
+      <!-- <div
          id="success-banner"
          class="bg-success w-100 py-4 justify-content-center fixed-top d-none"
       >
@@ -19,7 +19,7 @@
             style="margin-bottom: 5px;"
          />
          <p class="lead">Card created!</p>
-      </div>
+      </div> -->
       <!-- end succes banner -->
       <div class="container">
          <div class="row">
@@ -114,57 +114,52 @@
                <!-- end discard and save buttons -->
                <!-- card properties card -->
                <h4 class="text-center mt-5 text-muted">Card properties</h4>
-               <div class="card">
-                  <div class="card-body">
-                     <div class="row">
-                        <h6 class="mb-5 text-muted col-5 pl-0">
-                           Created on:
-                        </h6>
-                        <p class="col-7">May 7, 20202</p>
-                     </div>
-                     <div class="row">
-                        <h6 class="mb-5 text-muted col-5 pl-0">
-                           Last attempt:
-                        </h6>
-                        <p class="col-7">May 7, 20202</p>
-                     </div>
-                     <div class="row">
-                        <h6 class="mb-5 text-muted col-5 pl-0">
-                           Next attempt:
-                        </h6>
-                        <p class="col-7">May 7, 20202</p>
-                     </div>
-                     <div class="row">
-                        <h6 class="mb-5 text-muted col-5 pl-0">
-                           Consecutives:
-                        </h6>
-                        <p class="col-7">10</p>
 
-                        <!-- end card properties -->
-                        <!-- checkbox and delete button -->
-                        <div class="custom-control custom-checkbox col-12 mb-2">
-                           <input
-                              type="checkbox"
-                              class="custom-control-input"
-                              id="customCheck1"
-                           />
-                           <label
-                              class="custom-control-label"
-                              for="customCheck1"
-                              >Show delete button</label
-                           >
-                        </div>
+               <div class="row">
+                  <p class="mb-5 text-muted col-5 pl-0">
+                     Created on:
+                  </p>
+                  <p class="col-7">May 7, 20202</p>
+               </div>
+               <div class="row">
+                  <p class="mb-5 text-muted col-5 pl-0">
+                     Last attempt:
+                  </p>
+                  <p class="col-7">May 7, 20202</p>
+               </div>
+               <div class="row">
+                  <p class="mb-5 text-muted col-5 pl-0">
+                     Next attempt:
+                  </p>
+                  <p class="col-7">May 7, 20202</p>
+               </div>
+               <div class="row">
+                  <p class="mb-5 text-muted col-5 pl-0">
+                     Consecutives:
+                  </p>
+                  <p class="col-7">10</p>
 
-                        <a
-                           id="delete-card"
-                           href="#"
-                           class="btn btn-outline-danger btn-lg d-none"
-                        >
-                           Delete this card
-                        </a>
-                        <!-- end checkbox and delete button -->
-                     </div>
+                  <!-- end card properties -->
+                  <!-- checkbox and delete button -->
+                  <div class="custom-control custom-checkbox col-12 mb-2">
+                     <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="customCheck1"
+                     />
+                     <label class="custom-control-label" for="customCheck1"
+                        >Show delete button</label
+                     >
                   </div>
+
+                  <a
+                     id="delete-card"
+                     href="#"
+                     class="btn btn-outline-danger btn-lg d-none"
+                  >
+                     Delete this card
+                  </a>
+                  <!-- end checkbox and delete button -->
                </div>
             </div>
          </div>

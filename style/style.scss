@@ -101,3 +101,10 @@ textarea {
 .bg-danger p.lead {
    color: $white;
 }
+
+// removes the double dropdown icons from the select element
+.custom-select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}

@@ -11427,4 +11427,10 @@ textarea {
   color: #fff;
 }
 
+.custom-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 /*# sourceMappingURL=dist.css.map */

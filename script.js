@@ -28,8 +28,18 @@ $("#letsGoIndex").click(function () {
    alert("please enter email address");
    return false;
 });
+// $("#letsGoIndex").click(function () {
+//    if($("#email_1").length >= 1;){
+//     // alert("please enter email address");
+//    return true;
+//    }
+
+// });
 $("#letsGoIndex").click(function () {
-   if($("#email_1").length >= 1;)
-   // alert("please enter email address");
-   return true;
+   var checkEmail = $("#email_1").length;
+
+   if (checkEmail == 0) {
+      alert("please enter email address");
+      return false;
+   }
 });

@@ -22,6 +22,14 @@ $("#customCheck1").click(function () {
    $("#delete-card").toggleClass("d-none");
 });
 
-focusMethod = function getFocus() {
-   document.getElementById("page1").focus();
-};
+// index.html
+$("#letsGoIndex").click(function () {
+   $("#email_1").length == 0;
+   alert("please enter email address");
+   return false;
+});
+$("#letsGoIndex").click(function () {
+   if($("#email_1").length >= 1;)
+   // alert("please enter email address");
+   return true;
+});

@@ -82,13 +82,11 @@ $("#loginPage").click(function () {
 
 // count the characters on the bottom of the cards
 var maxCharacters = 240;
-var newCharacters = 0;
 
 $("#text1").keypress(function () {
-   var counter = $("#text1").val().length;
-   var removedCharacters = newCharacters + counter;
-   $("#countMe").text(removedCharacters + " /240");
-   if (counter == 0 || counter > 240) {
+   var count = $("#text1").val().length;
+   $("#countMe").text(count + "/" + maxCharacters);
+   if (count == 0 || count > maxCharacters) {
       $("#nextAnswer").addClass("disabled");
       $("#countMe").addClass("text-danger");
    } else {

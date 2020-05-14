@@ -83,27 +83,16 @@ $("#loginPage").click(function () {
 // count the characters on the bottom of the cards
 var maxCharacters = 240;
 var newCharacters = 0;
-var counter = $("#text1").val().length;
-var removedCharacters = newCharacters + counter;
 
 $("#text1").keypress(function () {
    var counter = $("#text1").val().length;
    var removedCharacters = newCharacters + counter;
    $("#countMe").text(removedCharacters + " /240");
-});
-
-$("#text1").keypress(function () {
-   if (removedCharacters >= 0 && removedCharacters <= 240) {
-      $("#nextAnswer").removeAttr("disabled");
-      } else if(removedCharacters >= 240){
-         $("#countMe").addClass("text-danger")
-      }
-
-
-      
+   if (counter == 0 || counter > 240) {
+      $("#nextAnswer").addClass("disabled");
+      $("#countMe").addClass("text-danger");
+   } else {
+      $("#countMe").removeClass("text-danger");
+      $("#nextAnswer").removeClass("disabled");
    }
 });
-
-// if (counter == 0 || counter > 240)
-// {$("#nextAnswer") the counter text danger;}
-// else { turn off the danger text and enable the button;}

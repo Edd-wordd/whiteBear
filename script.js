@@ -10,9 +10,6 @@ $(".car").click(function () {
 $("#save-imagery").click(function () {
    $("#success-banner").toggleClass("d-flex d-none");
 });
-// $("#save-imagery").click(function () {
-//    $("#success-banner").slideToggle("slow");
-// });
 
 $("#backToAnswer").click(function () {
    $("#error-banner").toggleClass("d-flex d-none");
@@ -29,9 +26,6 @@ $("#letsGoIndex").click(function () {
 
    if (checkEmail1 == 0) {
       $("#email_1").addClass("is-invalid");
-      return false;
-   } else {
-      return true;
    }
 });
 // // checks to see if password is input field is empty on sign up card
@@ -40,9 +34,6 @@ $("#letsGoIndex").click(function () {
 
    if (checkPass1 == 0) {
       $("#password_1").addClass("is-invalid");
-      return false;
-   } else {
-      return true;
    }
 });
 // checks to see if password is at least 9 characters long on sign up card
@@ -51,9 +42,6 @@ $("#letsGoIndex").click(function () {
 
    if (checkPass1 <= 8) {
       $("#password_1").addClass("passwordTooShort");
-      return false;
-   } else {
-      return true;
    }
 });
 
@@ -91,3 +79,31 @@ $("#loginPage").click(function () {
       return true;
    }
 });
+
+// count the characters on the bottom of the cards
+var maxCharacters = 240;
+var newCharacters = 0;
+var counter = $("#text1").val().length;
+var removedCharacters = newCharacters + counter;
+
+$("#text1").keypress(function () {
+   var counter = $("#text1").val().length;
+   var removedCharacters = newCharacters + counter;
+   $("#countMe").text(removedCharacters + " /240");
+});
+
+$("#text1").keypress(function () {
+   if (removedCharacters >= 0 && removedCharacters <= 240) {
+      $("#nextAnswer").removeAttr("disabled");
+      } else if(removedCharacters >= 240){
+         $("#countMe").addClass("text-danger")
+      }
+
+
+      
+   }
+});
+
+// if (counter == 0 || counter > 240)
+// {$("#nextAnswer") the counter text danger;}
+// else { turn off the danger text and enable the button;}

@@ -61,26 +61,35 @@
                   <div class="card bg-primary">
                      <div class="card-body secondCard">
                         <textarea
-                           id="page1"
+                           id="text1"
                            class="w-100"
                            rows="6"
-                           onclick="focusMethod()"
                            autofocus="autofocus"
                         ></textarea>
                      </div>
                   </div>
                </div>
-               <p class="float-right mb-5">0/300</p>
+               <p class="float-right mb-5" id="countMe">0/240</p>
                <div class="clearfix"></div>
 
-               <a
+               <button
                   href="create-imagery.html"
                   class="btn btn-outline-primary btn-lg float-right"
+                  id="nextAnswer"
+                  disabled
                >
                   Next
-               </a>
+               </button>
             </div>
          </div>
       </div>
    </body>
+   <!-- jQuery CDN -->
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+   ></script>
+
+   <!-- my scripts -->
+   <script src="script.js" defer></script>
 </html>

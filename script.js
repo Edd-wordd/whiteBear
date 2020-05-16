@@ -94,3 +94,15 @@ $("#text1").keypress(function () {
       $("#nextAnswer").removeClass("disabled");
    }
 });
+
+// The password cannot contain the local-part of the email address the user entered.
+var foundYou = $("#email_1").indexOf("@");
+var getFirstPart = $("#email_1").slice(0, foundYou);
+// var newEmail = getFirstPart;
+
+$("#letsGoIndex").click(function () {
+   if (getFirstPart.indexOf($("#password_1")) > -1) {
+      //checks to see if password is in email
+      alert("working");
+   }
+});

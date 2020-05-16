@@ -96,13 +96,20 @@ $("#text1").keypress(function () {
 });
 
 // The password cannot contain the local-part of the email address the user entered.
-var foundYou = $("#email_1").indexOf("@");
-var getFirstPart = $("#email_1").slice(0, foundYou);
-// var newEmail = getFirstPart;
 
 $("#letsGoIndex").click(function () {
-   if (getFirstPart.indexOf($("#password_1")) > -1) {
-      //checks to see if password is in email
-      alert("working");
+   //user clicks the lets go button
+   var userEmail = $("#email_1").val(); // get the value of the email inputed
+   var foundYou = userEmail.indexOf("@"); //getting the index of where the '@' symbol is
+   var getFirstPart = userEmail.slice(0, foundYou); //grabbing the local-part of the email that was inputed using slice
+   var inputedPassword = $("#password_1").val(); //grabbing the value of the password inputed.
+   // var newEmail = getFirstPart;
+
+   if (inputedPassword.indexOf(getFirstPart) > -1) {
+      //condition to check if password inputed is the same as the local-part of email
+
+      return alert("error message");
+   } else {
+      return alert("good to go message");
    }
 });

@@ -107,9 +107,19 @@ $("#letsGoIndex").click(function () {
 
    if (inputedPassword.indexOf(getFirstPart) > -1) {
       //condition to check if password inputed is the same as the local-part of email
-
-      return alert("error message");
-   } else {
-      return alert("good to go message");
+      $(".error-message").text("Email can not be password, please try again");
+      $("#password_1").addClass("btn-outline-danger");
+      // return alert("error message");
    }
+   //  else {
+   //    ;
+   // }
 });
+// create and oblect
+// create a function to make unique ID to replace current one
+// var to get the current time/date, use date(), date.now()
+// var to remove the milliseconds using slice?
+// create a random number, use Math.floor and Math.random, number has to be betweem 000-999(1000)
+// if statement to check the random number legnth, .legnth
+// if to small add numbers to the left of it.
+// concatenate the date and random number

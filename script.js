@@ -122,4 +122,4 @@ $("#letsGoIndex").click(function () {
 // create a random number, use Math.floor and Math.random, number has to be betweem 000-999(1000)
 // if statement to check the random number legnth, .legnth
 // if to small add numbers to the left of it.
-// concatenate the date and random number
+// concatenate the date and random number, should be 6 numbers

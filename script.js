@@ -116,6 +116,19 @@ $("#letsGoIndex").click(function () {
    // }
 });
 // create and oblect
+var createdId = {
+   _id: 678123,
+   email: "whatTheUserEnteredForTheirEmail",
+   password: "whatTheUserEnteredForTheirPassword",
+   createdOn: 200508232659,
+};
+// make variables to get sections of the date
+var todaysDate = new Date();
+console.log(todaysDate);
+var todaysYear = todaysDate.getYear();
+var todaysMonth = todaysDate.getMonth() + 1; //need t add one because it is zero indexed
+var todaysDay = todaysDate.getDay();
+
 // create a function to make unique ID to replace current one
 // var to get the current time/date, use date(), date.now()
 // var to remove the milliseconds using slice?

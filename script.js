@@ -109,7 +109,7 @@ $("#letsGoIndex").click(function () {
       $("#password_1").addClass("btn-outline-danger");
    } else {
       function addPadding(num) {
-         if (num.length < 2) {
+         if (String(num).length < 2) {
             return "0" + num.toString();
          } else {
             return num;
@@ -179,15 +179,15 @@ $("#save-imagery").click(function () {
    var userImagery = $("#imagery-create").val(); // get the value of the text inputed
 
    function addPadding(num) {
-      if (num.length < 2) {
-         return "0" + num.toString();
+      if (String(num).length < 2) {
+         return "0" + String(num);
       } else {
          return num;
       }
    }
 
    var todaysDate = new Date();
-   console.log(todaysDate);
+   console.log("todaysDate", todaysDate);
    //grabbing each part of the date from the date object using dot notation
    var todaysYear = todaysDate.getYear() - 100;
    console.log(todaysYear);

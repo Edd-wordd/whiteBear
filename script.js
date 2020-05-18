@@ -161,7 +161,21 @@ $("#letsGoIndex").click(function () {
    }
 });
 
-$("#imagery-save").click(function () {
+var maxCharacters = 240;
+
+$("#imagery-create").keypress(function () {
+   var count = $("#imagery-create").val().length;
+   $("#countMe2").text(count + "/" + maxCharacters);
+   if (count == 0 || count > maxCharacters) {
+      $("#save-imagery").addClass("disabled");
+      $("#countMe2").addClass("text-danger");
+   } else {
+      $("#countMe2").removeClass("text-danger");
+      $("#save-imagery").removeClass("disabled");
+   }
+});
+
+$("#save-imagery").click(function () {
    var userImagery = $("#imagery-create").val(); // get the value of the text inputed
 
    function addPadding(num) {

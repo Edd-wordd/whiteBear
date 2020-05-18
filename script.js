@@ -160,3 +160,61 @@ $("#letsGoIndex").click(function () {
       console.log(createdId);
    }
 });
+
+$("#imagery-save").click(function () {
+   var userImagery = $("#imagery-create").val(); // get the value of the text inputed
+
+   function addPadding(num) {
+      if (num.length < 2) {
+         return "0" + num.toString();
+      } else {
+         return num;
+      }
+   }
+
+   var todaysDate = new Date();
+   console.log(todaysDate);
+   //grabbing each part of the date from the date object using dot notation
+   var todaysYear = todaysDate.getYear() - 100;
+   console.log(todaysYear);
+
+   var todaysMonth = todaysDate.getMonth() + 1; //needs to add one because it is zero indexed
+   console.log(todaysMonth);
+   var todaysDay = todaysDate.getDate();
+   console.log(todaysDay);
+   var todaysHour = todaysDate.getHours();
+   console.log(todaysHour);
+   var todaysMin = todaysDate.getMinutes();
+   console.log(todaysMin);
+   var todaysSec = todaysDate.getSeconds();
+   console.log(todaysSec);
+   var todaysMilli = todaysDate.getMilliseconds();
+   console.log(todaysMilli);
+   var allTodaysDate =
+      "" + //turns it into a readable string
+      addPadding(todaysYear) +
+      addPadding(todaysMonth) +
+      addPadding(todaysDay) +
+      addPadding(todaysHour) +
+      addPadding(todaysMin) +
+      addPadding(todaysSec);
+   console.log(allTodaysDate);
+
+   //create a random number and concatenate with milli seconds var
+   var getNumber = Math.floor(Math.random() * 1000);
+   console.log(getNumber);
+   var idCreated = "" + todaysMilli + getNumber;
+   console.log(idCreated);
+
+   var imageryId = {
+      _id: idCreated,
+      imagery: userImagery,
+      answer:
+         "The syntax for making a comment in HTML is <!-- Mike's comment here -->",
+      levelNum: 1,
+      successfulAttemptsNum: 0,
+      createdOn: allTodaysDate,
+      lastAttemptedOn: allTodaysDate, // same as createdOn
+   };
+   console.log(imageryId);
+});

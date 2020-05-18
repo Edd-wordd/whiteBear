@@ -103,7 +103,6 @@ $("#letsGoIndex").click(function () {
    var foundYou = userEmail.indexOf("@"); //getting the index of where the '@' symbol is
    var getFirstPart = userEmail.slice(0, foundYou); //grabbing the local-part of the email that was inputed using slice
    var inputedPassword = $("#password_1").val(); //grabbing the value of the password inputed.
-   // var newEmail = getFirstPart;
 
    if (inputedPassword.indexOf(getFirstPart) > -1) {
       //condition to check if password inputed is the same as the local-part of email
@@ -111,28 +110,73 @@ $("#letsGoIndex").click(function () {
       $("#password_1").addClass("btn-outline-danger");
       // return alert("error message");
    }
-   //  else {
-   //    ;
+   var todaysDate = new Date();
+   console.log(todaysDate);
+   //grabbing each part of the date from the date object using dot notation
+   var todaysYear = todaysDate.getYear() - 100;
+   console.log(todaysYear);
+
+   var todaysMonth = todaysDate.getMonth() + 1; //needs to add one because it is zero indexed
+   console.log(todaysMonth);
+   var todaysDay = todaysDate.getDate();
+   console.log(todaysDay);
+   var todaysHour = todaysDate.getHours();
+   console.log(todaysHour);
+   var todaysMin = todaysDate.getMinutes();
+   console.log(todaysMin);
+
+   function addPadding(num) {
+      if (num.length < 2) {
+         return "0" + String(num);
+      } else {
+         return num;
+      }
+   }
+
+   var todaysSec = todaysDate.getSeconds();
+   console.log(todaysSec);
+   var todaysMilli = todaysDate.getMilliseconds();
+   console.log(todaysMilli);
+   var allTodaysDate =
+      "" + //turns it into a readable string
+      todaysYear +
+      addPadding(todaysMonth) +
+      todaysDay +
+      addPadding(todaysHour) +
+      todaysMin +
+      todaysSec;
+   console.log(allTodaysDate);
+
+   //create a random number and concatenate with milli seconds var
+   var getNumber = Math.floor(Math.random() * 1000);
+   console.log(getNumber);
+   var idCreated = "" + todaysMilli + getNumber;
+   console.log(idCreated);
+
+   // condition to check if password and email are validated and console.log id
+   // if (inputedPassword.indexOf(getFirstPart) > -1 && inputedPassword >= 9) {
+   //edit creatId object property values using dot notation
+
+   var createdId = {
+      _id: idCreated,
+      email: userEmail,
+      password: inputedPassword,
+      createdOn: allTodaysDate,
+   };
+
+   console.log(createdId);
    // }
 });
-// create and oblect
-var createdId = {
-   _id: 678123,
-   email: "whatTheUserEnteredForTheirEmail",
-   password: "whatTheUserEnteredForTheirPassword",
-   createdOn: 200508232659,
-};
-// make variables to get sections of the date
-var todaysDate = new Date();
-console.log(todaysDate);
-var todaysYear = todaysDate.getYear();
-var todaysMonth = todaysDate.getMonth() + 1; //need t add one because it is zero indexed
-var todaysDay = todaysDate.getDay();
+// create an object when lets go button is clicked
+// $("#letsGoIndex").click(function () {
 
-// create a function to make unique ID to replace current one
+// make variables to get sections of the date
+
+// });
+
+// create a function to make unique ID
 // var to get the current time/date, use date(), date.now()
 // var to remove the milliseconds using slice?
 // create a random number, use Math.floor and Math.random, number has to be betweem 000-999(1000)
 // if statement to check the random number legnth, .legnth
 // if to small add numbers to the left of it.
-// concatenate the date and random number, should be 6 numbers

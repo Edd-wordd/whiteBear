@@ -33,11 +33,14 @@ $("#letsGoIndex").click(function () {
 // // checks to see if password is input field is empty on sign up card
 $("#letsGoIndex").click(function () {
    var checkPass1 = $("#password_1").val().length;
+   var inputedPassword = $("#password_1").val(); //grabbing the value of the password inputed.
 
    if (checkPass1 == 0) {
       $("#password_1").addClass("is-invalid");
    } else if (checkPass1 <= 8) {
       $("#password_1").addClass("passwordTooShort");
+   } else if (newPasswordList.indexOf(inputedPassword)) {
+      $(".beOriginal").text("Passwords needs to be more original");
    } else {
       $("#password_1").addClass("is-valid");
    }
@@ -80,157 +83,8 @@ $("#text1").keypress(function () {
       $("#nextAnswer").removeClass("disabled");
    }
 });
-
-// The password cannot contain the local-part of the email address the user entered.
-
-$("#letsGoIndex").click(function () {
-   var userEmail = $("#email_1").val(); // get the value of the email inputed
-   var foundYou = userEmail.indexOf("@"); //getting the index of where the '@' symbol is
-   var getFirstPart = userEmail.slice(0, foundYou); //grabbing the local-part of the email that was inputed using slice
-   var inputedPassword = $("#password_1").val(); //grabbing the value of the password inputed.
-
-   if (inputedPassword.indexOf(getFirstPart) > -1) {
-      //condition to check if password inputed is the same as the local-part of email
-      $(".error-message").text("Email can not be password, please try again");
-      $("#password_1").addClass("btn-outline-danger");
-   } else {
-      function addPadding(num) {
-         if (String(num).length < 2) {
-            return "0" + num.toString();
-         } else {
-            return num;
-         }
-      }
-
-      var todaysDate = new Date();
-      console.log(todaysDate);
-      //grabbing each part of the date from the date object using dot notation
-      var todaysYear = todaysDate.getYear() - 100;
-      console.log(todaysYear);
-
-      var todaysMonth = todaysDate.getMonth() + 1; //needs to add one because it is zero indexed
-      console.log(todaysMonth);
-      var todaysDay = todaysDate.getDate();
-      console.log(todaysDay);
-      var todaysHour = todaysDate.getHours();
-      console.log(todaysHour);
-      var todaysMin = todaysDate.getMinutes();
-      console.log(todaysMin);
-      var todaysSec = todaysDate.getSeconds();
-      console.log(todaysSec);
-      var todaysMilli = todaysDate.getMilliseconds();
-      console.log(todaysMilli);
-      var allTodaysDate =
-         "" + //turns it into a readable string
-         addPadding(todaysYear) +
-         addPadding(todaysMonth) +
-         addPadding(todaysDay) +
-         addPadding(todaysHour) +
-         addPadding(todaysMin) +
-         addPadding(todaysSec);
-      console.log(allTodaysDate);
-
-      //create a random number and concatenate with milli seconds var
-      var getNumber = Math.floor(Math.random() * 1000);
-      console.log(getNumber);
-      var idCreated = "" + todaysMilli + getNumber;
-      console.log(idCreated);
-
-      var createdId = {
-         _id: idCreated,
-         email: userEmail,
-         password: inputedPassword,
-         createdOn: allTodaysDate,
-      };
-
-      console.log(createdId);
-   }
-});
-
-var maxCharacters = 240;
-
-$("#imagery-create").keypress(function () {
-   var count = $("#imagery-create").val().length;
-   $("#countMe2").text(count + "/" + maxCharacters);
-   if (count == 0 || count > maxCharacters) {
-      $("#save-imagery").addClass("disabled");
-      $("#countMe2").addClass("text-danger");
-   } else {
-      $("#countMe2").removeClass("text-danger");
-      $("#save-imagery").removeClass("disabled");
-   }
-});
-
-$("#save-imagery").click(function () {
-   var userImagery = $("#imagery-create").val(); // get the value of the text inputed
-
-   function addPadding(num) {
-      if (String(num).length < 2) {
-         return "0" + String(num);
-      } else {
-         return num;
-      }
-   }
-
-   var todaysDate = new Date();
-   console.log("todaysDate", todaysDate);
-   //grabbing each part of the date from the date object using dot notation
-   var todaysYear = todaysDate.getYear() - 100;
-   console.log(todaysYear);
-
-   var todaysMonth = todaysDate.getMonth() + 1; //needs to add one because it is zero indexed
-   console.log(todaysMonth);
-   var todaysDay = todaysDate.getDate();
-   console.log(todaysDay);
-   var todaysHour = todaysDate.getHours();
-   console.log(todaysHour);
-   var todaysMin = todaysDate.getMinutes();
-   console.log(todaysMin);
-   var todaysSec = todaysDate.getSeconds();
-   console.log(todaysSec);
-   var todaysMilli = todaysDate.getMilliseconds();
-   console.log(todaysMilli);
-   var allTodaysDate =
-      "" + //turns it into a readable string
-      addPadding(todaysYear) +
-      addPadding(todaysMonth) +
-      addPadding(todaysDay) +
-      addPadding(todaysHour) +
-      addPadding(todaysMin) +
-      addPadding(todaysSec);
-   console.log(allTodaysDate);
-
-   //create a random number and concatenate with milli seconds var
-   var getNumber = Math.floor(Math.random() * 1000);
-   console.log(getNumber);
-   var idCreated = "" + todaysMilli + getNumber;
-   console.log(idCreated);
-
-   var imageryId = {
-      _id: idCreated,
-      imagery: userImagery,
-      answer:
-         "The syntax for making a comment in HTML is <!-- Mike's comment here -->",
-      levelNum: 1,
-      successfulAttemptsNum: 0,
-      createdOn: allTodaysDate,
-      lastAttemptedOn: allTodaysDate, // same as createdOn
-   };
-   console.log(imageryId);
-});
-
-// array with common passwords with 8 characters or more
-var largerThen8 = [];
-function scanList(arr) {
-   var newArr = arr.filter((obj) => {
-      obj.length > 8;
-      largerThen8.push(newArr[i]);
-   });
-   return largerThen8;
-}
-console.log(largerThen8);
-
-let commonPassword = [
+// list of common passwords
+var commonPassword = [
    "x002tp00",
    "x4ww5qdr",
    "x72jhhu3z",
@@ -582,5 +436,148 @@ let commonPassword = [
    "zzzzxxxx",
    "zzzzzzz1",
 ];
-scanList(commonPassword);
-console.log(largerThen8);
+
+// shorthand syntax to filter through the common passwords and return the passwords that are larger than 8 charaters
+const newPasswordList = commonPassword.filter((items) => {
+   return items.length > 8;
+});
+console.log(newPasswordList);
+
+// $("#letsGoIndex").click(function () {
+//    var inputedPassword = $("#password_1").val(); //grabbing the value of the password inputed.
+
+$("#letsGoIndex").click(function () {
+   var userEmail = $("#email_1").val(); // get the value of the email inputed
+   var foundYou = userEmail.indexOf("@"); //getting the index of where the '@' symbol is
+   var getFirstPart = userEmail.slice(0, foundYou); //grabbing the local-part of the email that was inputed using slice
+   var inputedPassword = $("#password_1").val(); //grabbing the value of the password inputed.
+
+   if (inputedPassword.indexOf(getFirstPart) > -1) {
+      //condition to check if password inputed is the same as the local-part of email
+      $(".error-message").text("Email can not be password, please try again");
+      $("#password_1").addClass("btn-outline-danger");
+   } else {
+      function addPadding(num) {
+         if (String(num).length < 2) {
+            return "0" + num.toString();
+         } else {
+            return num;
+         }
+      }
+
+      var todaysDate = new Date();
+      console.log(todaysDate);
+      //grabbing each part of the date from the date object using dot notation
+      var todaysYear = todaysDate.getYear() - 100;
+      console.log(todaysYear);
+
+      var todaysMonth = todaysDate.getMonth() + 1; //needs to add one because it is zero indexed
+      console.log(todaysMonth);
+      var todaysDay = todaysDate.getDate();
+      console.log(todaysDay);
+      var todaysHour = todaysDate.getHours();
+      console.log(todaysHour);
+      var todaysMin = todaysDate.getMinutes();
+      console.log(todaysMin);
+      var todaysSec = todaysDate.getSeconds();
+      console.log(todaysSec);
+      var todaysMilli = todaysDate.getMilliseconds();
+      console.log(todaysMilli);
+      var allTodaysDate =
+         "" + //turns it into a readable string
+         addPadding(todaysYear) +
+         addPadding(todaysMonth) +
+         addPadding(todaysDay) +
+         addPadding(todaysHour) +
+         addPadding(todaysMin) +
+         addPadding(todaysSec);
+      console.log(allTodaysDate);
+
+      //create a random number and concatenate with milli seconds var
+      var getNumber = Math.floor(Math.random() * 1000);
+      console.log(getNumber);
+      var idCreated = "" + todaysMilli + getNumber;
+      console.log(idCreated);
+
+      var createdId = {
+         _id: idCreated,
+         email: userEmail,
+         password: inputedPassword,
+         createdOn: allTodaysDate,
+      };
+
+      console.log(createdId);
+   }
+});
+
+var maxCharacters = 240;
+
+$("#imagery-create").keypress(function () {
+   var count = $("#imagery-create").val().length;
+   $("#countMe2").text(count + "/" + maxCharacters);
+   if (count == 0 || count > maxCharacters) {
+      $("#save-imagery").addClass("disabled");
+      $("#countMe2").addClass("text-danger");
+   } else {
+      $("#countMe2").removeClass("text-danger");
+      $("#save-imagery").removeClass("disabled");
+   }
+});
+
+$("#save-imagery").click(function () {
+   var userImagery = $("#imagery-create").val(); // get the value of the text inputed
+
+   function addPadding(num) {
+      if (String(num).length < 2) {
+         return "0" + String(num);
+      } else {
+         return num;
+      }
+   }
+
+   var todaysDate = new Date();
+   console.log("todaysDate", todaysDate);
+   //grabbing each part of the date from the date object using dot notation
+   var todaysYear = todaysDate.getYear() - 100;
+   console.log(todaysYear);
+
+   var todaysMonth = todaysDate.getMonth() + 1; //needs to add one because it is zero indexed
+   console.log(todaysMonth);
+   var todaysDay = todaysDate.getDate();
+   console.log(todaysDay);
+   var todaysHour = todaysDate.getHours();
+   console.log(todaysHour);
+   var todaysMin = todaysDate.getMinutes();
+   console.log(todaysMin);
+   var todaysSec = todaysDate.getSeconds();
+   console.log(todaysSec);
+   var todaysMilli = todaysDate.getMilliseconds();
+   console.log(todaysMilli);
+   var allTodaysDate =
+      "" + //turns it into a readable string
+      addPadding(todaysYear) +
+      addPadding(todaysMonth) +
+      addPadding(todaysDay) +
+      addPadding(todaysHour) +
+      addPadding(todaysMin) +
+      addPadding(todaysSec);
+   console.log(allTodaysDate);
+
+   //create a random number and concatenate with milli seconds var
+   var getNumber = Math.floor(Math.random() * 1000);
+   console.log(getNumber);
+   var idCreated = "" + todaysMilli + getNumber;
+   console.log(idCreated);
+
+   var imageryId = {
+      _id: idCreated,
+      imagery: userImagery,
+      answer:
+         "The syntax for making a comment in HTML is <!-- Mike's comment here -->",
+      levelNum: 1,
+      successfulAttemptsNum: 0,
+      createdOn: allTodaysDate,
+      lastAttemptedOn: allTodaysDate, // same as createdOn
+   };
+   console.log(imageryId);
+});

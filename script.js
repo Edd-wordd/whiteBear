@@ -571,9 +571,10 @@ $("#save-imagery").click(function () {
 
    var imageryId = {
       _id: idCreated,
-      imagery: userImagery,
-      answer:
-         "The syntax for making a comment in HTML is <!-- Mike's comment here -->",
+      imagery: `?x=${encodeURIComponent(userImagery)}`,
+      answer: `?x=${encodeURIComponent(
+         "The syntax for making a comment in HTML is <!-- Mike's comment here -->"
+      )}`,
       levelNum: 1,
       successfulAttemptsNum: 0,
       createdOn: allTodaysDate,

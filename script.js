@@ -23,13 +23,29 @@ $("#customCheck1").click(function () {
 // checks to see if there only characters in the email input field when lets go button is clicked on sign up card
 $("#letsGoIndex").click(function () {
    var checkEmail1 = $("#email_1").val().length;
+   var userEmail = $("#email_1").val(); // get the value of the email inputed
+   var foundYou = userEmail.indexOf("@"); //getting the index of where the '@' symbol is
+   var getFirstPart = userEmail.slice(0, foundYou); //grabbing the local-part of the email that was inputed using slice
 
    if (checkEmail1 == 0) {
       $("#email_1").addClass("is-invalid");
+   }
+   differentChar = "";
+   for (let i in getFirstPart) {
+      if (differentChar.indexOf(getFirstPart[i]) == -1) {
+         differentChar = differentChar + getFirstPart[i];
+      }
+   }
+   if (differentChar.length < 3) {
+      $("#email_1").addClass("is-invalid");
+      $(".unique-mess").text("Must enter unique characters");
    } else {
       $("#email_1").addClass("is-valid");
    }
+
+   console.log(differentChar);
 });
+
 // // checks to see if password is input field is empty on sign up card
 $("#letsGoIndex").click(function () {
    var checkPass1 = $("#password_1").val().length;

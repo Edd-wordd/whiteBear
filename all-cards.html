@@ -2,7 +2,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <!-- link to bootstrap -->
+      <!-- link to css file -->
       <link rel="stylesheet" href="style/dist.css" />
       <title>All cards</title>
    </head>
@@ -62,10 +62,14 @@
                         type="text"
                         placeholder="Search for a word"
                         aria-label="Search"
+                        id="searchId"
                      />
                   </div>
                   <div class="col-4">
-                     <button class="btn btn-secondary btn-sm btn-block">
+                     <button
+                        class="btn btn-secondary btn-sm btn-block"
+                        id="searchBtn"
+                     >
                         Search
                      </button>
                   </div>
@@ -223,5 +227,6 @@
          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
          crossorigin="anonymous"
       ></script>
+      <script src="script.js"></script>
    </body>
 </html>

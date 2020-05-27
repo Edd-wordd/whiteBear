@@ -39,8 +39,14 @@ $("#letsGoIndex").click(function () {
    if (differentChar.length < 3) {
       $("#email_1").addClass("is-invalid");
       $(".unique-mess").text("Must enter unique characters");
+   }
+   if (/^(\w+)([@])(\w+)([.])(\D+)/gi.test(userEmail) === false) {
+      $("#email_1").addClass("is-invalid");
+      $(".unique-mess").text("Not a valid email address");
    } else {
       $("#email_1").addClass("is-valid");
+      $("#email_1").removeClass("is-invalid");
+      $(".unique-mess").text("");
    }
 
    console.log(differentChar);
@@ -51,14 +57,17 @@ $("#letsGoIndex").click(function () {
    var checkPass1 = $("#password_1").val().length;
    var inputedPassword = $("#password_1").val(); //grabbing the value of the password inputed.
 
-   if (checkPass1 == 0) {
+   if (checkPass1 === 0) {
       $("#password_1").addClass("is-invalid");
    } else if (checkPass1 <= 8) {
       $("#password_1").addClass("passwordTooShort");
-   } else if (newPasswordList.indexOf(inputedPassword)) {
+   } else if (newPasswordList.indexOf(inputedPassword) == true) {
       $(".beOriginal").text("Passwords needs to be more original");
+      $("#password_1").addClass("is-invalid");
    } else {
       $("#password_1").addClass("is-valid");
+      $("#password_1").removeClass("is-invalid");
+      $(".beOriginal").text("");
    }
 });
 
@@ -70,6 +79,7 @@ $("#loginPage").click(function () {
       $("#email_2").addClass("is-invalid");
    } else {
       $("#email_2").addClass("is-valid");
+      $("#email_2").removeClass("is-invalid");
    }
 });
 // // checks to see if there only characters in the password input field sign in button is clicked on login card
@@ -82,6 +92,7 @@ $("#loginPage").click(function () {
       $("#password_2").addClass("is-invalid");
    } else {
       $("#password_2").addClass("is-valid");
+      $("#password_2").removeClass("is-invalid");
    }
 });
 
@@ -468,7 +479,7 @@ $("#letsGoIndex").click(function () {
    var getFirstPart = userEmail.slice(0, foundYou); //grabbing the local-part of the email that was inputed using slice
    var inputedPassword = $("#password_1").val(); //grabbing the value of the password inputed.
 
-   if (inputedPassword.indexOf(getFirstPart) > -1) {
+   if (inputedPassword.indexOf(getFirstPart) < -1) {
       //condition to check if password inputed is the same as the local-part of email
       $(".error-message").text("Email can not be password, please try again");
       $("#password_1").addClass("btn-outline-danger");
@@ -479,6 +490,22 @@ $("#letsGoIndex").click(function () {
          } else {
             return num;
          }
+      }
+      function changePassword(string) {
+         let checkIndex = string.split("");
+         let newString = checkIndex.map((a, b) => {
+            if (
+               (a.charCodeAt() >= 65 && a.charCodeAt() <= 89) ||
+               (a.charCodeAt() >= 97 && a.charCodeAt() <= 121)
+            ) {
+               return a.charCodeAt() + 1;
+            } else if (a.charCodeAt() === 90 || a.charCodeAt() === 122) {
+               return a.charCodeAt() - 25;
+            } else {
+               return a.charCodeAt();
+            }
+         }, []);
+         return String.fromCharCode(...newString);
       }
 
       var todaysDate = new Date();
@@ -518,7 +545,7 @@ $("#letsGoIndex").click(function () {
       var createdId = {
          _id: idCreated,
          email: userEmail,
-         password: inputedPassword,
+         password: changePassword(inputedPassword),
          createdOn: allTodaysDate,
       };
 
@@ -597,4 +624,18 @@ $("#save-imagery").click(function () {
       lastAttemptedOn: allTodaysDate, // same as createdOn
    };
    console.log(imageryId);
+});
+// Sanitize users input in search bar (all cards)
+// get input val of search bar
+//
+$("#searchBtn").click(function () {
+   let userSearchInput = $("#searchId").val();
+   console.log(userSearchInput);
+   let grabSpace = /\W+/g;
+   console.log(grabSpace);
+   let grabAndRemove = userSearchInput.replace(grabSpace, " ");
+   console.log(grabAndRemove);
+   let makeSmall = grabAndRemove.toLowerCase();
+   let submit = makeSmall.trim();
+   console.log(submit);
 });

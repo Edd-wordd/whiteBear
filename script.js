@@ -491,20 +491,39 @@ $("#letsGoIndex").click(function () {
             return num;
          }
       }
+
       function changePassword(string) {
-         let checkIndex = string.split("");
-         let newString = checkIndex.map((a, b) => {
-            if (
-               (a.charCodeAt() >= 65 && a.charCodeAt() <= 89) ||
-               (a.charCodeAt() >= 97 && a.charCodeAt() <= 121)
-            ) {
-               return a.charCodeAt() + 1;
-            } else if (a.charCodeAt() === 90 || a.charCodeAt() === 122) {
-               return a.charCodeAt() - 25;
-            } else {
-               return a.charCodeAt();
+         let charArr = string.split("");
+         let newCharArray = charArr.map((char) => {
+            console.log("ori: ", char);
+            // for each char add one to the character code
+            let charCode = char.charCodeAt();
+            console.log("code: ", charCode);
+            // if this char is alphabet do this
+            if (charCode >= 65 && charCode <= 122) {
+               // if the charcode is exactly 90 return captial A
+               if (charCode === 90) {
+                  return "A";
+               } else if (charCode === 122) {
+                  return "a";
+               } else {
+                  // else if the charcdoe exactly 122  return lower case a
+                  // else run the following code
+
+                  let encryptedCharCode = charCode + 1;
+                  console.log("encrpted: ", encryptedCharCode);
+                  let encrptedChar = String.fromCharCode(encryptedCharCode);
+                  console.log("str: ", encrptedChar);
+                  return encrptedChar;
+               }
             }
-         }, []);
+            // else return the character
+            return char;
+         });
+
+         console.log(newCharArray);
+         let mendedArr = newCharArray.join("");
+         console.log(mendedArr);
          return String.fromCharCode(...newString);
       }
 

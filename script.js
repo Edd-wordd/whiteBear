@@ -40,7 +40,7 @@ $("#letsGoIndex").click(function () {
       $("#email_1").addClass("is-invalid");
       $(".unique-mess").text("Must enter unique characters");
    }
-   if (/^(\w+)([@])(\w+)([.])(\D+)/gi.test(userEmail) === false) {
+   if (/^\w+@\w+\.[a-zA-Z]{2,}/gi.test(userEmail) === false) {
       $("#email_1").addClass("is-invalid");
       $(".unique-mess").text("Not a valid email address");
    } else {
